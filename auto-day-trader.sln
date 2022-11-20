@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D1E1D2E4-7D7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoDayTrader.Web", "src\AutoDayTrader.Web\AutoDayTrader.Web.csproj", "{4810526F-CAAF-466E-8906-85FD065B2A37}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AAA8B75A-6FA3-4923-B27C-E9B3252FA09E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoDayTrader.Web.Tests", "tests\AutoDayTrader.Web.Tests\AutoDayTrader.Web.Tests.csproj", "{230A44D3-BBCF-406B-ACBA-5A1B99070191}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +24,13 @@ Global
 		{4810526F-CAAF-466E-8906-85FD065B2A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4810526F-CAAF-466E-8906-85FD065B2A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4810526F-CAAF-466E-8906-85FD065B2A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{230A44D3-BBCF-406B-ACBA-5A1B99070191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230A44D3-BBCF-406B-ACBA-5A1B99070191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230A44D3-BBCF-406B-ACBA-5A1B99070191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230A44D3-BBCF-406B-ACBA-5A1B99070191}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4810526F-CAAF-466E-8906-85FD065B2A37} = {D1E1D2E4-7D72-4892-94BB-E9252739169B}
+		{230A44D3-BBCF-406B-ACBA-5A1B99070191} = {AAA8B75A-6FA3-4923-B27C-E9B3252FA09E}
 	EndGlobalSection
 EndGlobal
