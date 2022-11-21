@@ -1,4 +1,4 @@
-namespace AutoDayTrader.Web.Tests;
+namespace AutoDayTrader.Core.Tests;
 
 [TestClass]
 public class CoreTests
