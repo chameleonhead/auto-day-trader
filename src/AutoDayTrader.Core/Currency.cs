@@ -2,10 +2,10 @@ namespace AutoDayTrader.Core;
 
 public class Currency
 {
-    public static Currency EUR = new Currency("EUR", 0.0001);
-    public static Currency USD = new Currency("USD", 0.0001);
-    public static Currency JPY = new Currency("JPY", 0.01);
-    public static Currency AUD = new Currency("AUD", 0.0001);
+    public static Currency EUR = new Currency("EUR", 0.0001m);
+    public static Currency USD = new Currency("USD", 0.0001m);
+    public static Currency JPY = new Currency("JPY", 0.01m);
+    public static Currency AUD = new Currency("AUD", 0.0001m);
 
     private static Dictionary<string, Currency> currencies = new Dictionary<string, Currency>() {
             { EUR.value, EUR},
@@ -16,9 +16,9 @@ public class Currency
 
     private string value;
 
-    public double Pip { get; }
+    public decimal Pip { get; }
 
-    private Currency(string value, double pip)
+    private Currency(string value, decimal pip)
     {
         this.value = value;
         this.Pip = pip;

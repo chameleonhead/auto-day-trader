@@ -2,6 +2,9 @@ namespace AutoDayTrader.Core;
 
 public interface Symbol
 {
-    double Pip { get; }
+    Currency Quoted { get; }
+    decimal Pip { get; }
+    decimal OrderUnit { get; }
+
     string ToString();
 }

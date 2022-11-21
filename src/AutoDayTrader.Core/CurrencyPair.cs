@@ -4,7 +4,8 @@ public class CurrencyPair : Symbol
 {
     public Currency Key { get; }
     public Currency Quoted { get; }
-    public double Pip => Quoted.Pip;
+    public decimal Pip => Quoted.Pip;
+    public decimal OrderUnit => 100_000;
 
     public CurrencyPair(Currency key, Currency quoted)
     {
@@ -35,7 +36,7 @@ public class CurrencyPair : Symbol
         return Key.ToString() + Quoted.ToString();
     }
 
-    public Quote CreateQuote(double bid, double ask)
+    public Quote CreateQuote(decimal bid, decimal ask)
     {
         return new Quote(this, bid, ask);
     }
