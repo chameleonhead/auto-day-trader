@@ -3,19 +3,19 @@ namespace AutoDayTrader.Core;
 public class Quote
 {
     public Symbol Symbol { get; }
-    public decimal Bid { get; }
-    public decimal Ask { get; }
+    public Price Bid { get; }
+    public Price Ask { get; }
 
     public Quote(Symbol symbol, decimal bid, decimal ask)
     {
         this.Symbol = symbol;
-        this.Bid = bid;
-        this.Ask = ask;
+        this.Bid = new Price(symbol.Quoted, bid);
+        this.Ask = new Price(symbol.Quoted, ask);
     }
 
-    public Spread Spread => Spread.From(Symbol, Bid, Ask);
+    public Spread Spread => Spread.From(Symbol, Bid.Value, Ask.Value);
 
-    public decimal AmountForVolume(Position position, decimal volume)
+    public Price AmountForVolume(Position position, decimal volume)
     {
         switch (position)
         {

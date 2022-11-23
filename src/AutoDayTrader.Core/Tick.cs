@@ -12,6 +12,5 @@ namespace AutoDayTrader.Core
             this.Quote = quote;
 
         }
-
     }
 }
