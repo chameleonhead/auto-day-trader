@@ -19,14 +19,14 @@ public class TradingContext
 
         var currencyPair = CurrencyPair.Of(value.Currency, target);
         var tick = Market.CurrentTickForSymbol(currencyPair);
-        var targetQuote = tick.Quote;
+        var price = tick.Quote.PriceForPosition(position);
         if (currencyPair.Key.Equals(value.Currency))
         {
-            return new Price(target, position == Position.Long ? value.Value * targetQuote.Ask.Value : value.Value * targetQuote.Bid.Value);
+            return new Price(target, value.Value * price.Value);
         }
         else
         {
-            return new Price(target, position == Position.Long ? value.Value / targetQuote.Ask.Value : value.Value / targetQuote.Bid.Value);
+            return new Price(target, value.Value / price.Value);
         }
     }
 }

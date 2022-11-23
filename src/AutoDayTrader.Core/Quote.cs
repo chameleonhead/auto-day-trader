@@ -27,4 +27,9 @@ public class Quote
                 throw new ArgumentException(nameof(position));
         }
     }
+
+    public Price PriceForPosition(Position position)
+    {
+        return position == Position.Long ? Ask : Bid;
+    }
 }
