@@ -26,7 +26,7 @@ public class RiskManagementTests
             {
                 throw new InvalidOperationException();
             }
-            return new Tick(DateTime.MinValue, symbol, new Quote(symbol, 99.986m, 100m));
+            return new Tick(DateTime.MinValue, new Quote(symbol, 99.986m, 100m));
         });
         var calculator = new RiskCalculator(account, market);
         var quote = new CurrencyPair("EURUSD").CreateQuote(1.00016m, 1.00000m);
@@ -44,7 +44,7 @@ public class RiskManagementTests
             {
                 throw new InvalidOperationException();
             }
-            return new Tick(DateTime.MinValue, symbol, new Quote(symbol, 99.986m, 100m));
+            return new Tick(DateTime.MinValue, new Quote(symbol, 99.986m, 100m));
         });
         var calculator = new RiskCalculator(account, market);
         var quote = new CurrencyPair("USDJPY").CreateQuote(99.986m, 100m);
@@ -73,7 +73,7 @@ public class RiskManagementTests
             {
                 throw new InvalidOperationException();
             }
-            return new Tick(DateTime.MinValue, symbol, new Quote(symbol, 100m, 99.986m));
+            return new Tick(DateTime.MinValue, new Quote(symbol, 100m, 99.986m));
         });
         var calculator = new RiskCalculator(account, market);
         var quote = new CurrencyPair("EURUSD").CreateQuote(1.00000m, 0.99986m);
@@ -91,7 +91,7 @@ public class RiskManagementTests
             {
                 throw new InvalidOperationException();
             }
-            return new Tick(DateTime.MinValue, symbol, new Quote(symbol, 100m, 99.986m));
+            return new Tick(DateTime.MinValue, new Quote(symbol, 100m, 99.986m));
         });
         var calculator = new RiskCalculator(account, market);
         var quote = new CurrencyPair("USDJPY").CreateQuote(100m, 99.986m);
