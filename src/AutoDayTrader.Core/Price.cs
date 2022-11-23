@@ -52,4 +52,16 @@ public class Price
     {
         return new Price(lhs.Currency, lhs.Value / rhs);
     }
+
+    public override string ToString()
+    {
+        switch (Currency.Pip)
+        {
+            case 0.01m:
+                return string.Format($"{Value:#,#0.00} {Currency}");
+            case 0.0001m:
+                return string.Format($"{Value:#,#0.0000} {Currency}");
+        }
+        return string.Format($"{Value} {Currency}");
+    }
 }
